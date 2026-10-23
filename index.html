@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S16 夯到拉</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Noto+Sans+SC:wght@400;500;700&family=ZCOOL+QingKe+HuangYou&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="title">
+    <h1>S16 选手从夯到拉</h1>
+    <p>2026 英雄联盟全球总决赛 19 支队伍 95 名首发。拖动卡片排档，点照片换一张官方照。</p>
+  </div>
+  <div class="actions">
+    <button type="button" id="btn-export">保存为图片</button>
+    <button type="button" id="btn-reset" class="ghost">全部放回待排</button>
+  </div>
+</header>
+
+<main>
+  <section class="board" id="board" aria-label="排名档位"></section>
+
+  <section class="pool" aria-label="待排选手">
+    <div class="pool-head">
+      <h2>待排 <span id="pool-count"></span></h2>
+      <div class="filters" id="filters" role="group" aria-label="按赛区或战队筛选"></div>
+    </div>
+    <div class="cards pool-cards" id="pool" data-tier="pool"></div>
+  </section>
+</main>
+
+<footer class="foot">
+  照片来自 LoL Esports 官方 Flickr「Worlds 2026」Asset Day 及赛事相册；标「旧照」的 4 位选手暂无本届单人照，使用 2026 赛季官方头像。
+</footer>
+
+<script src="vendor/Sortable.min.js"></script>
+<script src="vendor/html2canvas.min.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
